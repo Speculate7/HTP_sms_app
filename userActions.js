@@ -41,7 +41,7 @@ var UserActions = function()
   };
   
   //list commands that a user can send
-  self.userHelp = function(g, res, client, sender, action)
+  self.userOption = function(g, res, client, sender, action)
   {
     console.log("userOption");
     if (commands.length != commandDescriptions.length){
