@@ -120,7 +120,7 @@ var UserActions = function()
   self.userPoetry = function(g, res, client, sender, action, body)
   {
     console.log("userPoetry");
-    var i = body.charAt[4]
+    var i = action.charAt[4]
     var body  = "";
     if (i == 1) {
       body += "Coping:\n It has rained for five days\n running\n the world is\n a round puddle\n of sunless water\n where small islands\n are only the beginning\n to cope\n a young boy\n in my garden\n is bailing out water\n from his flower patch\n when I ask him why\n he tells me\n young seeds that have not seen sun\n forget\n and drown easily.\n\n Audre Lorde";
