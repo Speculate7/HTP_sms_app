@@ -1,7 +1,7 @@
 var UserActions = function() 
 {
   var self = this;
-  var commands = ["join","help", "leave", "share", "info", "poem"];
+  var commands = ["join","options", "leave", "share", "information", "poem"];
   var commandDescriptions = ["Registers you with the HTP_sms_app poetry service.",
    "Shows you a list of commands you can send.",
    "Removes you from the HTP_sms_app poetry service.", 
@@ -24,7 +24,7 @@ var UserActions = function()
    };
    
    //get some general info on the service
-   self.userInfo = function(g, res, client, sender, action)
+   self.userInformation = function(g, res, client, sender, action)
    {
       console.log("userInfo");
       var body  = "HTP sms app is a public text message service template created to help artists build solutions.";
@@ -43,7 +43,7 @@ var UserActions = function()
   //list commands that a user can send
   self.userHelp = function(g, res, client, sender, action)
   {
-    console.log("userHelp");
+    console.log("userOption");
     if (commands.length != commandDescriptions.length){
       console.warn("Commands list and descriptions list don't match.");
       return;
@@ -203,7 +203,7 @@ var UserActions = function()
       self.userSetName(g, res, client, sender, body);
     } else if (command == 'leave') {
       self.userLeave(g, res, client, sender, body);
-    } else if (command == 'help') {
+    } else if (command.startsWith('option')) {
       self.userHelp(g, res, client, sender, body);
     } else if (command.startsWith('share')) {
       self.userShare(g, res, client, sender, body);
