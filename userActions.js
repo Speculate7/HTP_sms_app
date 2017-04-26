@@ -122,7 +122,7 @@ var UserActions = function()
     console.log("userPoetry");
     console.log("userPoetry: " + action);
     var body  = "";
-    var i = action.charAt[4];
+    var i = action.charAt(4);
     console.log(i)
     if (i == 1) {
       body += "Coping:\n It has rained for five days\n running\n the world is\n a round puddle\n of sunless water\n where small islands\n are only the beginning\n to cope\n a young boy\n in my garden\n is bailing out water\n from his flower patch\n when I ask him why\n he tells me\n young seeds that have not seen sun\n forget\n and drown easily.\n\n Audre Lorde";
