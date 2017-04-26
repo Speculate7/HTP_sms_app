@@ -120,6 +120,7 @@ var UserActions = function()
   self.userPoetry = function(g, res, client, sender, action, body)
   {
     console.log("userPoetry");
+    console.log("userPoetry: " + action);
     var body  = "";
     var i = action.charAt[4];
     console.log(i)
