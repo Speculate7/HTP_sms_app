@@ -37,7 +37,7 @@ var UserActions = function()
     console.log("userJoin");
 	  
     var body  = "Thank you for joining! Text, i am 'a username' to finish registering";
-    self.userResponse(res, body, media);
+    self.userResponse(res, body);
   };
   
   //list commands that a user can send
