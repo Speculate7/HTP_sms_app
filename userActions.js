@@ -206,11 +206,11 @@ var UserActions = function()
     } else if (command == 'leave') {
       self.userLeave(g, res, client, sender, body);
     } else if (command.startsWith('option')) {
-      self.userHelp(g, res, client, sender, body);
+      self.userOption(g, res, client, sender, body);
     } else if (command.startsWith('share')) {
       self.userShare(g, res, client, sender, body);
     } else if (command.startsWith('info')) {
-      self.userInfo(g, res, client, sender, body);
+      self.userInformation(g, res, client, sender, body);
     } else if (command == 'join') {
       self.userJoin(g, res, client, sender, body);   
     } else {
