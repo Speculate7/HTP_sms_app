@@ -28,7 +28,7 @@ var UserActions = function()
    {
       console.log("userInfo");
       var body  = "HTP sms app is a public text message service template created to help artists build solutions.";
-      self.userResponse(res, body, media);
+      self.userResponse(res, body);
    };
 	
   //registers a new user
