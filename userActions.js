@@ -1,14 +1,20 @@
 var UserActions = function() 
 {
   var self = this;
-  var commands = ["join","options", "leave", "share", "information", "poem"];
+  var commands = ["join","options", "leave", "share", "information", "poem", "mood"];
   var commandDescriptions = ["Registers you with the HTP_sms_app poetry service.",
    "Shows you a list of commands you can send.",
    "Removes you from the HTP_sms_app poetry service.", 
    "Text 'share' followed by a friend's number to tell that friend about the HTP_sms_app poetry service.",
    "Gives you some additional information about the service", "If followed by number 1-10 i.e., poem2, this command will send you a poem."];
 
-   
+   self.userMood = function(g,res,client,sender,action)
+   {
+    console.log("userMood");
+    var media = "https://media2.giphy.com/media/b5LTssxCLpvVe/giphy.gif";
+    self.userResponse(res, media);
+   };
+	
    self.userResponse = function(res, body, media)
    {
     var resp;
@@ -199,6 +205,8 @@ var UserActions = function()
     var command = body.toLowerCase().trim();
     if (command == "poem") {
       self.userPoem(g, res, client, sender, body);
+    } else if(command=='mood'){
+      self.userMood(g,res,client,sender,body)
     } else if (command.startsWith('poem')) {
       self.userPoetry(g, res, client, sender, body);
     } else if (command.startsWith('i am')) {
