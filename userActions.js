@@ -8,6 +8,13 @@ var UserActions = function()
    "Text 'share' followed by a friend's number to tell that friend about the HTP_sms_app poetry service.",
    "Gives you some additional information about the service", "If followed by number 1-10 i.e., poem2, this command will send you a poem."];
 
+  self.userCognizant=function(g, res, client, sender, action)
+  {
+  console.log("userCognizant");
+  var body="Donald Trump is President";
+  self.userResponse(res, body);
+  };
+	
    self.userMood = function(g,res,client,sender,action)
    {
     console.log("userMood");
@@ -221,6 +228,8 @@ var UserActions = function()
       self.userInformation(g, res, client, sender, body);
     } else if (command == 'join') {
       self.userJoin(g, res, client, sender, body);   
+    } else if(command =='donald trump') {
+     self.userCognizant(g, res, client, sender, body);
     } else {
       self.userFail(g, res, client, sender, body);
     }
