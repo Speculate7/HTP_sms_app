@@ -8,6 +8,13 @@ var UserActions = function()
    "Text 'share' followed by a friend's number to tell that friend about the HTP_sms_app poetry service.",
    "Gives you some additional information about the service", "If followed by number 1-10 i.e., poem2, this command will send you a poem."];
 
+  self.userClass2017 = function()
+  {
+  console.log("userClass2017");
+  var media = "http://funds.gfmcdn.com/14832817_1474848870.2859.jpg";
+  self.userClass2017 (res,body,media);
+  }	
+
   self.userCognizant=function(g, res, client, sender, action)
   {
   console.log("userCognizant");
@@ -230,8 +237,10 @@ var UserActions = function()
       self.userJoin(g, res, client, sender, body);   
     } else if(command =='donald trump') {
      self.userCognizant(g, res, client, sender, body);
+    } else if(command=="Class2017") {
+      self.userClass2017();
     } else {
-      self.userFail(g, res, client, sender, body);
+     self.userFail(g, res, client, sender, body);
     }
   };
 
