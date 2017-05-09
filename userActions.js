@@ -8,11 +8,11 @@ var UserActions = function()
    "Text 'share' followed by a friend's number to tell that friend about the HTP_sms_app poetry service.",
    "Gives you some additional information about the service", "If followed by number 1-10 i.e., poem2, this command will send you a poem."];
 
-  self.userClass2017 = function()
+  self.userClass2017 = function(g, res, client, sender, action)
   {
   console.log("userClass2017");
   var media = "http://funds.gfmcdn.com/14832817_1474848870.2859.jpg";
-  self.userClass2017 (res,body,media);
+  self.userClass2017 (res,media);
   }	
 
   self.userCognizant=function(g, res, client, sender, action)
