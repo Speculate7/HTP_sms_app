@@ -237,7 +237,7 @@ var UserActions = function()
       self.userJoin(g, res, client, sender, body);   
     } else if(command =='donald trump') {
      self.userCognizant(g, res, client, sender, body);
-    } else if(command=="Class2017") {
+    } else if(command=="class2017") {
       self.userClass2017();
     } else {
      self.userFail(g, res, client, sender, body);
