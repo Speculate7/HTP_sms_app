@@ -12,7 +12,7 @@ var UserActions = function()
   {
   console.log("userClass2017");
   var media = "http://funds.gfmcdn.com/14832817_1474848870.2859.jpg";
-  self.userClass2017 (res,media);
+  self.userResponse(res,media);
   };	
 
   self.userCognizant=function(g, res, client, sender, action)
